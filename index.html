@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+</head>
+<body>
+    <!--Header Bar-->
+    <div id="customNav">
+        <h2 id="greeting"></h2>
+        <h2>Weather Dashboard</h2>
+    </div>
+
+    <!--Search Side Bar-->
+    <div id="customSidebar">
+        <h3>Search For City:</h3>
+        <input type="text" id="cityInput"></input>
+        <button id="searchBtn" type="button">Search</button>
+    </div>
+    <div id="searchHistoryBtnList"></div>
+
+    <!--Today's Weather-->
+    <div id="currentWeather">
+        <h2>Todays Forecast:</h2>
+        <h2 id="cityName"></h2>
+        <h3 id="currentDate"></h3>
+        <img src="" id="currentIcon">
+        <ul>
+            <li id="currentTemp"></li>
+            <li id="currentWind"></li>
+            <li id="currentHumid"></li>
+        </ul>
+    </div>
+
+    <!--5 Day Forecast-->
+    <div id="fiveDay">
+        <h2>5-Day Forecast:</h2>
+        <div id="day1">
+            <h4 id="date1"></h4>
+            <img src="" id="icon1">
+            <ul>
+                <li id="temp1"></li>
+                <li id="wind1"></li>
+                <li id="humid1"></li>
+            </ul>
+        </div>
+        <div id="day2">
+            <h4 id="date2"></h4>
+            <img src="" id="icon2">
+            <ul>
+                <li id="temp2"></li>
+                <li id="wind2"></li>
+                <li id="humid2"></li>
+            </ul>
+        </div>
+        <div id="day3">
+            <h4 id="date3"></h4>
+            <img src="" id="icon3">
+            <ul>
+                <li id="temp3"></li>
+                <li id="wind3"></li>
+                <li id="humid3"></li>
+            </ul>
+        </div>
+        <div id="day4">
+            <h4 id="date4"></h4>
+            <img src="" id="icon4">
+            <ul>
+                <li id="temp4"></li>
+                <li id="wind4"></li>
+                <li id="humid4"></li>
+            </ul>
+        </div>
+        <div id="day5">
+            <h4 id="date5"></h4>
+            <img src="" id="icon5">
+            <ul>
+                <li id="temp5"></li>
+                <li id="wind5"></li>
+                <li id="humid5"></li>
+            </ul>
+        </div>
+    </div>
+    <script src=""></script>
+    <script src="./assets/javascript/script.js"></script>
+</body>
+</html>
