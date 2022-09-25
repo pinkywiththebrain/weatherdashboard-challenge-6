@@ -1,0 +1,13 @@
+/* I mostly used Bootstrap */
+
+* {
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    line-height: 1.5;
+}
+
+
+#customNav {
+    background-color: rgb(18, 81, 219);
+    padding: 10px;
+}
