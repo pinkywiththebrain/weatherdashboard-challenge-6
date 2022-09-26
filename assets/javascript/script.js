@@ -46,19 +46,38 @@ function getWeather(cityName) {
     })
 
     .then(function() {
-      fetch('https://api.openweathermap.org/data/2.5/weather?lat=' + lat + '&lon=' + lon + apiKey)
+      fetch('https://api.openweathermap.org/data/2.5/weather?lat=' + lat + '&lon=' + lon + apiKey + '&units=imperial')
       .then(function(response) {
         return response.json();
       })
       .then(function(data) {
         console.log(data)
+
+        currentCityName.textContent = data.name
+        currentDate.textContent = (moment().format("dddd, MMMM Do, YYYY"))
+        currentTemp.textContent = 'Temperature: ' + data.main.temp + 'F'
+        currentWind.textContent = 'Wind: ' + data.wind.speed + 'MPH'
+        currentHumid.textContent = 'Humidity: ' + data.main.humidity + '%'
+
       })
-      
 
     })
+
+    .then(function() {
+      fetch('https://api.openweathermap.org/data/2.5/forecast?lat=' + lat + '&lon=' + lon + apiKey + '&units=imperial')
+      .then(function(response) {
+        return response.json();
+      })
+      .then(function(data) {
+        console.log(data)
+
+          
+      })
+
+    })
+
 };
 
-// getWeather()
 
  searchBtn.addEventListener("click", formSubmitHandler)
 

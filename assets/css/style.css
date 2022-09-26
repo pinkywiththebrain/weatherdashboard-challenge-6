@@ -11,3 +11,7 @@
     background-color: rgb(18, 81, 219);
     padding: 10px;
 }
+
+li {
+    list-style: none;
+}
