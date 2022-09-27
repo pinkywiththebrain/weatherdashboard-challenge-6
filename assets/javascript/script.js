@@ -6,13 +6,14 @@ var cityInput = document.querySelector('#cityInput');
 var searchBtn = document.querySelector('#searchBtn');
 var searchHistory = document.querySelector('#searchHistoryBtnList');
 
+var cities = []
 var lat
 var lon
 
 getSaved();
 
  //Function to handle the submission
-var formSubmitHandler = function (event) {
+  var formSubmitHandler = function (event) {
     event.preventDefault();
   
      var cityName = cityInput.value.trim();
@@ -20,7 +21,7 @@ var formSubmitHandler = function (event) {
     if (cityName) {
       getWeather(cityName);
       saveLocal(cityName);
-  
+      cityInput.value = ""
     } else {
       alert('Please enter a location.');
     }
@@ -106,20 +107,25 @@ function getWeather(cityName) {
 //Function to save to local storage
 function saveLocal(cityName) {
 
-  localStorage.setItem("city", JSON.stringify(cityName))
-
+  cities.push(cityName)
+  localStorage.setItem("cities", JSON.stringify(cities))
+  getSaved()
 }
 
 //Function to get info from local storage
 function getSaved() {
-   var cities = localStorage.getItem("city") || []
+   cities = JSON.parse(localStorage.getItem("cities")) || []
 
+   searchHistory.innerHTML = ""
    for (i = 0; i < cities.length; i++) {
     var city = document.createElement("button")
-    city.innerText = cities[i].cityName
+    city.innerText = cities[i]
     searchHistory.appendChild(city)
 }}
 
+// function buttonClickHandler(event) {
+
+// }
 
  searchBtn.addEventListener("click", formSubmitHandler)
 

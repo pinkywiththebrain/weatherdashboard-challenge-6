@@ -6,6 +6,8 @@ In this challenge I was required to make a weather dashboard app using the Open 
 
 ## Image
 
+<img src="./assets/images/image.png" width=500px>
+
 ## Deployed Website
 
 <a href="https://pinkywiththebrain.github.io/weatherdashboard-challenge-6/">Weather Dashboard</a>
